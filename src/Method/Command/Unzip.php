@@ -33,7 +33,7 @@ class Unzip extends AbstractCommandMethod
     {
         $this->checkSupport($format);
 
-        $command = 'unzip '.escapeshellarg($file).' -d '.escapeshellarg($target);
+        $command = 'unzip -UU '.escapeshellarg($file).' -d '.escapeshellarg($target);
 
         $exitCode = $this->executeCommand($command, $a);
 
